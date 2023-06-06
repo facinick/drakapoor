@@ -1,3 +1,4 @@
+import Image from "next/image"
 
 const getRatingComponent = (rating: number) => {
 
@@ -23,7 +24,7 @@ export const ReviewsCarousal = ({ reviews }: ReviewsCarousalProps) => (
       reviews.map((review, index) => {
         return (
           <div id={`slide${index}`} className="carousel-item relative w-[360px] rounded-box">
-            <img src="/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" />
+            <Image src="/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" alt={""} />
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a href="#slide4" className="btn btn-circle">❮</a>
               <a href="#slide2" className="btn btn-circle">❯</a>
