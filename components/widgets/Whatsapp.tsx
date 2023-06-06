@@ -17,7 +17,7 @@ export const WhatsappWidget = ({size, url, text}: WidgetProps & WhatsappProps) =
 
   return (
     <>
-      <a target='_blank' href={url} className="w-full h-full flex justify-center items-center gap-3 transition-all">
+      <a rel="noreferrer" target='_blank' href={url} className="w-full h-full flex justify-center items-center gap-3 transition-all">
           <div className='w-10 h-10 flex justify-center items-center'>
             <Image src={svg} alt={text}></Image>
           </div>

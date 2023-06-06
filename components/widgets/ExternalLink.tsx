@@ -22,9 +22,9 @@ export const ExternalLinkWidget = ({ cover, size, url, text, brand }: WidgetProp
 
   return (
     <>
-      <a style={{backgroundColor: bgColor}} target='_blank' href={url} className={`p-4 w-full h-full flex justify-center items-center gap-3 transition-all bg-[${bgColor}]`}>
+      <a style={{backgroundColor: bgColor}} rel="noreferrer" target='_blank' href={url} className={`p-4 w-full h-full flex justify-center items-center gap-3 transition-all bg-[${bgColor}]`}>
         <div className='w-[140px] h-full'>
-          <div className='w-10 h-10 flex justify-center items-center'>
+          <div className='rounded-lg overflow-hidden w-10 h-10 flex justify-center items-center'>
             <Image src={svg} alt={text}></Image>
           </div>
           <div className='mt-3'>
