@@ -3,7 +3,6 @@ import Item from '@/components/bento/Item';
 import LaptopLayout from '@/components/bento/LaptopLayout';
 import MobileLayout from '@/components/bento/MobileLayout';
 import Section from '@/components/bento/Section';
-import { useState, useEffect } from 'react';
 import Book1 from '@/components/icons/book1.jpg'
 import Book2 from '@/components/icons/book2.jpg'
 import youtube1 from '@/components/covers/youtube1.png'
@@ -20,9 +19,6 @@ import { ExternalLinkWidget } from '@/components/widgets/ExternalLink';
 import { PhoneWidget } from '@/components/widgets/Phone';
 import { TextWidget } from '@/components/widgets/Text';
 import { WhatsappWidget } from '@/components/widgets/Whatsapp';
-import Head from 'next/head';
-import { ReviewsCarousal } from '@/components/widgets/ReviewsCarousal';
-import { GoogleBusinessWidget } from '@/components/widgets/GoogleBusiness';
 import { ImageWidget } from '@/components/widgets/Image';
 import useWindowSize from '@/lib/hooks/use-window-size';
 
@@ -46,10 +42,10 @@ export default function Home() {
     <Section width={sectionWidth}><TextWidget text='Dr Anuradha Kapoor MD, books for MBBS 📚' size={1} /></Section>
     <Item height={2}><ExternalLinkWidget cover={Book1} size={2} url={'https://www.amazon.in/Management-Diabetes-Mellitus-Vol-Complete-Practical-ebook/dp/B08951BB16'} text={'Diabetes Mellitus Book I'} brand={'amazon'} /></Item>
     <Item height={2}><ExternalLinkWidget cover={Book2} size={2} url={'https://www.amazon.in/Management-Diabetes-Mellitus-Vol-Complete-Practical-ebook/dp/B089515SN3'} text={'Diabetes Mellitus Book II'} brand={'amazon'} /></Item>
-    <Section width={sectionWidth}><TextWidget text='Reviews' size={1} /></Section>
+    <Section width={sectionWidth}><TextWidget text='Reviews ⭐️' size={1} /></Section>
     <Item height={4}><ImageWidget image={googlerating1} description={'google rating 5'} /></Item>
     <Item height={4}><ImageWidget image={googlerating2} description={'google rating 5'} /></Item>
-    <Section width={sectionWidth}><TextWidget text='Short videos' size={1} /></Section>
+    <Section width={sectionWidth}><TextWidget text='Short videos 🎬' size={1} /></Section>
     <Item height={2}><ExternalLinkWidget cover={youtube1} size={2} url={'https://www.youtube.com/watch?v=SeR_31iwrA8&t=6s'} text={'Meet Dr Anuradha Kapoor'} brand={'youtube'} /></Item>
     <Item height={2}><ExternalLinkWidget cover={youtube2} size={2} url={'https://www.youtube.com/watch?v=L0IzTiAa4oc'} text={'Dr. Anuradha Kapoor (Strong Bones)'} brand={'youtube'} /></Item>
     <Item height={2}><ExternalLinkWidget cover={youtube3} size={2} url={'https://www.youtube.com/watch?v=jKG2YxQKRhA&t=30s'} text={'What happens if your Sugar level is not under control?'} brand={'youtube'} /></Item>
@@ -57,7 +53,7 @@ export default function Home() {
     <Section width={sectionWidth}><TextWidget text='Diabetes Resources' size={1} /></Section>
     <Item height={1}><ExternalLinkWidget cover={''} size={1} url={'https://www.facebook.com/diabetesdaily/'} text={'Diabetes Daily'} brand={'facebook'} /></Item>
     <Item height={1}><ExternalLinkWidget cover={''} size={1} url={'https://www.facebook.com/diabetesuk/'} text={'Diabetes UK'} brand={'facebook'} /></Item>
-    <Section width={sectionWidth}><TextWidget text='Special thanks' size={1} /></Section>
+    <Section width={sectionWidth}><TextWidget text='Special thanks 🙏🏻' size={1} /></Section>
     <Item height={1}><ExternalLinkWidget cover={''} size={1} url={'https://www.divislabs.com/'} text={'Divis Pharma Industry'} brand={'divis'} /></Item>
     <Item height={1}><ExternalLinkWidget cover={''} size={1} url={'https://www.lupin.com/'} text={'Lupin'} brand={'lupin'} /></Item>
     <Item height={1}><ExternalLinkWidget cover={''} size={1} url={'https://www.cipla.com/home'} text={'Cipla'} brand={'cipla'} /></Item>
