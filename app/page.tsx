@@ -24,114 +24,13 @@ import Head from 'next/head';
 import { ReviewsCarousal } from '@/components/widgets/ReviewsCarousal';
 import { GoogleBusinessWidget } from '@/components/widgets/GoogleBusiness';
 import { ImageWidget } from '@/components/widgets/Image';
-
-const SEO = () => (<Head>
-  {/* SEO meta tags */}
-  <title>Dr A Kapoor's Diabetes Control Clinic</title>
-  <meta name="description" content="Diabetic complications, Blood sugar management, weight loss management, Diabetes reversal, Thyroid health management" />
-  <meta name="revisit-after" content="1 days"></meta>
-  <meta name="keywords" content="Diabetes, Diabetologist, Mumbai, Best Diabates Doctor"></meta>
-  <meta name="robots" content="index, follow"></meta>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
-  <meta name="author" content="Dr Anuradha Kapoor"></meta>
-  <meta name="theme-color" content="#000" />
-  <link rel="manifest" href="/manifest.json" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" href="/apple-icon.png"></link>
-  {/* <!-- Contact/</meta> information --> */}
-  <link rel="canonical" href="https://drakapoor.com"></link>
-  <link rel="whatsapp" href="https://wa.me/+919820381015"></link>
-  <link rel="whatsapp-catalogue" href="https://wa.me/c/919820381015"></link>
-  <link rel="phone" href="tel:+919820381015"></link>
-  <link rel="email" href="mailto:dranuradhakapoor123@gmail.com"></link>
-
-  {/* <!-- Social profiles --> */}
-  <link rel="me" href="https://www.linkedin.com/in/drakapoor"></link>
-  <link rel="justdial" href="https://www.justdial.com/Mumbai/Dr-A-Kapoors-Diabetes-Control-Clinic-Lifeline-Medicare-Hospital-Goregaon-West-MTNL-Goregaon-West-Goregaon-West/022PXX22-XX22-160811174833-F2M7_BZDET" hrefLang="en"></link>
-  <link rel="lybrate" href="https://www.lybrate.com/mumbai/doctor/dr-anuradha-kapoor-diabetologist" hrefLang="en"></link>
-  <link rel="practo" href="https://www.practo.com/mumbai/clinic/dr-anuradha-kapoor-s-diabetes-care-clinic-malad-2" hrefLang="en"></link>
-  {/* Open Graph meta tags */}
-  <meta property="og:title" content="Dr A Kapoor's Diabetes Control Clinic" />
-  {/* TODO */}
-  <meta property="og:description" content="Diabetic complications, Blood sugar management, weight loss management, Diabetes reversal, Thyroid health management" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://drakapoor.com" />
-  {/* TODO */}
-  <meta property="og:image" content="/logo.png" />
-
-  {/* Schema.org structured data */}
-  <script type="application/ld+json" dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "MedicalOrganization",
-      "name": "Dr A Kapoor's Diabetes Control Clinic",
-      "url": "https://drakapoor.com",
-      /* TODO */
-      "logo": "https://yourwebsite.com/logo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Lifeline Medicare Hospital, Dlh Park, Ground Floor, Swami Vivekananda Rd, near MTNL Signal, Sunder Nagar, Goregaon West",
-        "addressLocality": "Mumbai",
-        "addressRegion": "Maharashtra",
-        "postalCode": "400062",
-        "addressCountry": "India"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+919820381015",
-        "email": "dranuradhakapoor123@gmail.com",
-        "contactType": "customer support"
-      },
-      "openingHours": "Mo-Fr 09:00-20:00",
-      /* TODO */
-      "image": "/logo.png",
-      "sameAs": [
-        "https://www.justdial.com/Mumbai/Dr-A-Kapoors-Diabetes-Control-Clinic-Lifeline-Medicare-Hospital-Goregaon-West-MTNL-Goregaon-West-Goregaon-West/022PXX22-XX22-160811174833-F2M7_BZDET",
-        "https://www.lybrate.com/mumbai/doctor/dr-anuradha-kapoor-diabetologist",
-        "https://www.practo.com/mumbai/clinic/dr-anuradha-kapoor-s-diabetes-care-clinic-malad-2"
-      ]
-    })
-  }} />
-
-  {/* Favicon */}
-  <link rel="icon" type="image/png" href="/favicon-32x32.png" />
-
-  {/* Additional Open Graph tags */}
-  <meta property="og:site_name" content="Dr A Kapoor's Diabetes Control Clinic" />
-  <meta property="og:locale" content="en_US" />
-  {/* <meta property="og:see_also" content="https://yourwebsite.com/additional-link" /> */}
-
-  {/* Additional Schema.org tags */}
-  <meta itemProp="name" content="Dr A Kapoor's Diabetes Control Clinic" />
-  <meta itemProp="description" content="Diabetic complications, Blood sugar management, weight loss management, Diabetes reversal, Thyroid health management" />
-  <meta itemProp="image" content="/logo.png" />
-  <meta itemProp="telephone" content="+919820381015" />
-  <meta itemProp="email" content="dranuradhakapoor123@gmail.com" />
-  <meta itemProp="address" content="Lifeline Medicare Hospital, Dlh Park, Ground Floor, Swami Vivekananda Rd, near MTNL Signal, Sunder Nagar, Goregaon West" />
-  <meta itemProp="openingHours" content="Mo-Fr 09:00-20:00" />
-  <meta itemProp="sameAs" content="https://www.justdial.com/Mumbai/Dr-A-Kapoors-Diabetes-Control-Clinic-Lifeline-Medicare-Hospital-Goregaon-West-MTNL-Goregaon-West-Goregaon-West/022PXX22-XX22-160811174833-F2M7_BZDET" />
-  <meta itemProp="sameAs" content="https://www.lybrate.com/mumbai/doctor/dr-anuradha-kapoor-diabetologist" />
-  <meta itemProp="sameAs" content="https://www.practo.com/mumbai/clinic/dr-anuradha-kapoor-s-diabetes-care-clinic-malad-2" />
-</Head>)
+import useWindowSize from '@/lib/hooks/use-window-size';
 
 export default function Home() {
 
-  const [isMobileLayout, setIsMobileLayout] = useState(true);
+  const {isDesktop, isMobile} = useWindowSize()
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileLayout(document.body.clientWidth < 1210);
-    };
-
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  const sectionWidth = isMobileLayout ? 1 : 2
+  const sectionWidth = isMobile ? 1 : 2
 
   const data = (<>
     <Item height={1}><WhatsappWidget url={'https://wa.me/919820381015'} text='Appointment on WhatsApp!' size={1} /></Item>
@@ -182,12 +81,11 @@ export default function Home() {
 
   return (
     <>
-      <SEO />
       <div id="home" className='flex justify-center'>
-        {isMobileLayout && <MobileLayout>
+        {isMobile && <MobileLayout>
           {data}
         </MobileLayout>}
-        {!isMobileLayout && <LaptopLayout>
+        {isDesktop && <LaptopLayout>
           {data}
         </LaptopLayout>}
       </div>

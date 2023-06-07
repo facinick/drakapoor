@@ -5,9 +5,116 @@ import { sfPro, inter } from "./fonts";
 
 export const metadata = {
   title: "Dr A Kapoor's Diabetes Control Clinic",
-  description:
-    "Diabetic complications, Blood sugar management, weight loss management, Diabetes reversal, Thyroid health management",
-  themeColor: "#FFF",
+  description: "Diabetes reversal, Diabetic complications, Blood sugar management, weight loss management , Thyroid health management",
+  manifest: '/manifest.json',
+  viewport: {
+      width: 'device-width',
+      initialScale: 1,
+      maximumScale: 1,
+  },
+  openGraph: {
+    title: "Dr A Kapoor's Diabetes Control Clinic",
+    description: "Diabetes reversal, Diabetic complications, Blood sugar management, weight loss management , Thyroid health management",
+    url: 'https://drakapoor.com',
+    siteName: 'Dr A Kapoor Diabetes',
+    images: [
+      {
+        url: 'https://drakapoor.com/logo.png',
+        width: 512,
+        height: 512,
+      },
+      {
+        url: 'https://drakapoor.com/icons/icon-192x192.png',
+        width: 192,
+        height: 192,
+      },
+      {
+        url: 'https://drakapoor.com/icons/icon-256x256.png',
+        width: 256,
+        height: 256,
+      },
+      {
+        url: 'https://drakapoor.com/icons/icon-384x384.png',
+        width: 384,
+        height: 384,
+      },
+      {
+        url: 'https://drakapoor.com/icons/icon-512x512.png',
+        width: 512,
+        height: 512,
+      },
+    ],
+    authors: ['Dr Anuradha Kapoor'],
+    locale: 'en_US',
+    type: 'website',
+    icons: {
+      icon: [{ url: '/logo.png' }],
+      shortcut: ['/logo.png'],
+      apple: [
+        { url: '/apple-icon.png' },
+        { url: '/apple-icon-180x180.png', sizes: '180x180', type: 'image/png' },
+        { url: '/apple-icon-152x152.png', sizes: '152x152', type: 'image/png' },
+        { url: '/apple-icon-144x144.png', sizes: '144x144', type: 'image/png' },
+        { url: '/apple-icon-120x120.png', sizes: '120x120', type: 'image/png' },
+        { url: '/apple-icon-114x114.png', sizes: '114x114', type: 'image/png' },
+        { url: '/apple-icon-76x76.png', sizes: '76x76', type: 'image/png' },
+        { url: '/apple-icon-72x72.png', sizes: '72x72', type: 'image/png' },
+        { url: '/apple-icon-57x57.png', sizes: '57x57', type: 'image/png' },
+      ],
+      android: [
+        { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+        { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+        { url: '/android-icon-192x192.png', sizes: '192x192', type: 'image/png' },
+        { url: '/android-icon-144x144.png', sizes: '144x144', type: 'image/png' },
+        { url: '/android-icon-96x96.png', sizes: '96x96', type: 'image/png' },
+        { url: '/android-icon-72x72.png', sizes: '72x72', type: 'image/png' },
+        { url: '/android-icon-48x48.png', sizes: '48x48', type: 'image/png' },
+        { url: '/android-icon-36x36.png', sizes: '36x36', type: 'image/png' },
+      ],
+      other: {
+        rel: 'apple-touch-icon-precomposed',
+        url: '/apple-icon-precomposed.png',
+      },
+    },
+
+     appleWebApp: {
+      title: 'Dr Anuradha Kapoor Diabetes',
+      statusBarStyle: 'white-translucent',
+    },
+     category: 'Health and Fitness',
+  },
+
+  metadataBase: new URL('https://drakapoor.com'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+    },
+  },
+  creator: 'Shriyans Kapoor<facinick@gmail.com>',
+  keywords: ["Diabetes", "Diabetologist", "Mumbai", "Best Diabates Doctor", "Diabetes reversal", "Weight loss management", "Thyroid management"],
+  authors: [{ name: 'Dr Anuradha Kapoor' }, { name: 'Dr Anuradha Kapoor', url: 'https://drakapoor.com' }],
+  referrer: 'origin-when-cross-origin',
+  colorScheme: 'light',
+  themeColor: 'white',
+  formatDetection: {
+    email: true,
+    address: true,
+    telephone: true,
+  },
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default async function RootLayout({
@@ -18,9 +125,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={cx(sfPro.variable, inter.variable)}>
-        <main className="flex min-h-screen w-full flex-col items-center justify-center">
-          {children}
-        </main>
+        {children}
         <Analytics />
       </body>
     </html>

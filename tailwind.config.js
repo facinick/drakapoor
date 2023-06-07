@@ -7,6 +7,7 @@ module.exports = {
     hoverOnlyWhenSupported: true,
   },
   theme: {
+
     extend: {
       colors: {
         'bio': '#565656',
