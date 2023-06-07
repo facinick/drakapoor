@@ -13,13 +13,13 @@ interface WhatsappProps {
 
 export const WhatsappWidget = ({size, url, text}: WidgetProps & WhatsappProps) => {
 
-  const { svg  } = getBrandStuff('whatsapp')
+  const { image, bgColor  } = getBrandStuff('whatsapp')
 
   return (
     <>
-      <a rel="noreferrer" target='_blank' href={url} className="w-full h-full flex justify-center items-center gap-3 transition-all">
+      <a style={{backgroundColor: bgColor}} rel="noreferrer" target='_blank' href={url} className="w-full h-full flex justify-center items-center gap-3 transition-all">
           <div className='w-10 h-10 flex justify-center items-center'>
-            <Image src={svg} alt={text}></Image>
+            <Image src={image} alt={text}></Image>
           </div>
         <p className="text-md">{text}</p>
       </a>

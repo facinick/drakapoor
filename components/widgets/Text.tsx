@@ -1,6 +1,3 @@
-import { faPhone } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 interface WidgetProps {
   size: 1 | 2 | 4
 }

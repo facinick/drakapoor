@@ -8,6 +8,14 @@ module.exports = {
   },
   theme: {
     extend: {
+      colors: {
+        'bio': '#565656',
+        'domain': 'rgba(0,0,0,.6)',
+        'button-dim': '#f6f6f6'
+      },
+      height: {
+        'full-calc': 'calc(100%)',
+      },
       fontFamily: {
         display: ["var(--font-sf)", "system-ui", "sans-serif"],
         default: ["var(--font-inter)", "system-ui", "sans-serif"],
