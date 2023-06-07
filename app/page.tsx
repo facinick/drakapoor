@@ -22,6 +22,7 @@ import { WhatsappWidget } from '@/components/widgets/Whatsapp';
 import { ImageWidget } from '@/components/widgets/Image';
 import useWindowSize from '@/lib/hooks/use-window-size';
 import { useEffect } from 'react';
+import { ReviewsCarousal } from '@/components/widgets/ReviewsCarousal';
 
 export default function Home() {
 
@@ -46,6 +47,7 @@ export default function Home() {
     <Section width={sectionWidth}><TextWidget text='Reviews ⭐️' size={1} /></Section>
     <Item height={4}><ImageWidget image={googlerating1} description={'google rating 5'} /></Item>
     <Item height={4}><ImageWidget image={googlerating2} description={'google rating 5'} /></Item>
+    {/* <Item height={4}><ReviewsCarousal /></Item> */}
     <Section width={sectionWidth}><TextWidget text='Short videos 🎬' size={1} /></Section>
     <Item height={2}><ExternalLinkWidget cover={youtube1} size={2} url={'https://www.youtube.com/watch?v=SeR_31iwrA8&t=6s'} text={'Meet Dr Anuradha Kapoor'} brand={'youtube'} /></Item>
     <Item height={2}><ExternalLinkWidget cover={youtube2} size={2} url={'https://www.youtube.com/watch?v=L0IzTiAa4oc'} text={'Dr. Anuradha Kapoor (Strong Bones)'} brand={'youtube'} /></Item>

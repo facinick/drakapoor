@@ -3,24 +3,71 @@
 @tailwind utilities;
 
 @layer utilities {
-  .trunc2 {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    white-space: pre-wrap;
-    overflow: hidden;
-  };
+
   .trunc1 {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     white-space: pre-wrap;
     overflow: hidden;
-  };
+  }
+}
+
+@layer utilities {
+  .trunc2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    white-space: pre-wrap;
+    overflow: hidden;
+  }
+}
+
+@layer utilities {
   .trunc3 {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+    white-space: pre-wrap;
+    overflow: hidden;
+  }
+}
+
+@layer utilities {
+  .trunc4 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    white-space: pre-wrap;
+    overflow: hidden;
+  }
+}
+
+@layer utilities {
+  .trunc5 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    white-space: pre-wrap;
+    overflow: hidden;
+  }
+}
+
+@layer utilities {
+  .trunc6 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    white-space: pre-wrap;
+    overflow: hidden;
+  }
+}
+
+@layer utilities {
+  .trunc7 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
     white-space: pre-wrap;
     overflow: hidden;
   }
