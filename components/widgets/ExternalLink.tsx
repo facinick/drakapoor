@@ -21,7 +21,7 @@ export const ExternalLinkWidget = ({ cover, size, url, text, brand }: WidgetProp
   let domain = ""
   if (!url) {
     href = "#"
-    domain = extractDomain(window.location.href)
+    domain = "drakapoor.com"
   }
 
   switch (size) {

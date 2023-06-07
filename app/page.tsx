@@ -25,10 +25,10 @@ import { ReviewsCarousal } from '@/components/widgets/ReviewsCarousal';
 import { GoogleBusinessWidget } from '@/components/widgets/GoogleBusiness';
 import { ImageWidget } from '@/components/widgets/Image';
 
-export const SEO = () => (<Head>
+const SEO = () => (<Head>
   {/* SEO meta tags */}
   <title>Dr A Kapoor's Diabetes Control Clinic</title>
-  <meta name="description" content="Provide a concise and compelling description of the doctor and their services." />
+  <meta name="description" content="Diabetic complications, Blood sugar management, weight loss management, Diabetes reversal, Thyroid health management" />
   <meta name="revisit-after" content="1 days"></meta>
   <meta name="keywords" content="Diabetes, Diabetologist, Mumbai, Best Diabates Doctor"></meta>
   <meta name="robots" content="index, follow"></meta>
@@ -53,11 +53,11 @@ export const SEO = () => (<Head>
   {/* Open Graph meta tags */}
   <meta property="og:title" content="Dr A Kapoor's Diabetes Control Clinic" />
   {/* TODO */}
-  <meta property="og:description" content="Provide a concise and compelling description of the doctor and their services." />
+  <meta property="og:description" content="Diabetic complications, Blood sugar management, weight loss management, Diabetes reversal, Thyroid health management" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://drakapoor.com" />
   {/* TODO */}
-  <meta property="og:image" content="https://yourwebsite.com/images/doctor-thumbnail.jpg" />
+  <meta property="og:image" content="/logo.png" />
 
   {/* Schema.org structured data */}
   <script type="application/ld+json" dangerouslySetInnerHTML={{
@@ -84,7 +84,7 @@ export const SEO = () => (<Head>
       },
       "openingHours": "Mo-Fr 09:00-20:00",
       /* TODO */
-      "image": "https://yourwebsite.com/images/doctor-thumbnail.jpg",
+      "image": "/logo.png",
       "sameAs": [
         "https://www.justdial.com/Mumbai/Dr-A-Kapoors-Diabetes-Control-Clinic-Lifeline-Medicare-Hospital-Goregaon-West-MTNL-Goregaon-West-Goregaon-West/022PXX22-XX22-160811174833-F2M7_BZDET",
         "https://www.lybrate.com/mumbai/doctor/dr-anuradha-kapoor-diabetologist",
@@ -93,19 +93,18 @@ export const SEO = () => (<Head>
     })
   }} />
 
-  /* TODO */
   {/* Favicon */}
-  <link rel="icon" type="image/png" href="https://yourwebsite.com/favicon.png" />
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" />
 
   {/* Additional Open Graph tags */}
-  <meta property="og:site_name" content="Your Clinic Name" />
+  <meta property="og:site_name" content="Dr A Kapoor's Diabetes Control Clinic" />
   <meta property="og:locale" content="en_US" />
   {/* <meta property="og:see_also" content="https://yourwebsite.com/additional-link" /> */}
 
   {/* Additional Schema.org tags */}
   <meta itemProp="name" content="Dr A Kapoor's Diabetes Control Clinic" />
-  <meta itemProp="description" content="Provide a concise and compelling description of the doctor and their services." />
-  <meta itemProp="image" content="https://yourwebsite.com/images/doctor-thumbnail.jpg" />
+  <meta itemProp="description" content="Diabetic complications, Blood sugar management, weight loss management, Diabetes reversal, Thyroid health management" />
+  <meta itemProp="image" content="/logo.png" />
   <meta itemProp="telephone" content="+919820381015" />
   <meta itemProp="email" content="dranuradhakapoor123@gmail.com" />
   <meta itemProp="address" content="Lifeline Medicare Hospital, Dlh Park, Ground Floor, Swami Vivekananda Rd, near MTNL Signal, Sunder Nagar, Goregaon West" />

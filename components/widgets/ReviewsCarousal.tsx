@@ -39,7 +39,7 @@ export const ReviewsCarousal = ({ reviews, id }: ReviewsCarousalProps) => (
         const nextIndex = (index + 1) % nReviews
         const prevIndex = (index - 1) < 0 ? nReviews - 1 : (index - 1)
         return (
-          <div id={`${id}slide${index}`} className="carousel-item relative w-full h-full">
+          <div key={index} id={`${id}slide${index}`} className="carousel-item relative w-full h-full">
             <div className="absolute w-full h-full flex justify-center items-center flex-col">
               <div className="w-full h-full p-4 max-h-[240px] overflow-hidden flex flex-col gap-5">
                 <div className="flex flex-row gap-2">
