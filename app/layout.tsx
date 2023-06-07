@@ -10,7 +10,8 @@ export const metadata = {
   viewport: {
       width: 'device-width',
       initialScale: 1,
-      maximumScale: 1,
+      // maximumScale: 1,
+      
   },
   openGraph: {
     title: "Dr A Kapoor's Diabetes Control Clinic",
@@ -121,7 +122,8 @@ export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
+  }) {
+  
   return (
     <html lang="en">
       <body className={cx(sfPro.variable, inter.variable)}>

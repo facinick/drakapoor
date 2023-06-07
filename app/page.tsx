@@ -21,10 +21,11 @@ import { TextWidget } from '@/components/widgets/Text';
 import { WhatsappWidget } from '@/components/widgets/Whatsapp';
 import { ImageWidget } from '@/components/widgets/Image';
 import useWindowSize from '@/lib/hooks/use-window-size';
+import { useEffect } from 'react';
 
 export default function Home() {
 
-  const {isDesktop, isMobile} = useWindowSize()
+  const { isDesktop, isMobile } = useWindowSize()
 
   const sectionWidth = isMobile ? 1 : 2
 
@@ -74,6 +75,18 @@ export default function Home() {
     <Item height={1}><ExternalLinkWidget cover={''} size={1} url={'https://www.icicibank.com/'} text={'ICICI Netbanking Services'} brand={'icici'} /></Item>
     <Item height={1}><ExternalLinkWidget cover={''} size={1} url={'https://www.onlinesbi.sbi/'} text={'State Bank of India'} brand={'sbi'} /></Item>
   </>)
+
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(function (registration) {
+          console.log('Registration successful, scope is:', registration.scope);
+        })
+        .catch(function (error) {
+          console.log('Service worker registration failed, error:', error);
+        });
+    }
+  }, [])
 
   return (
     <>
