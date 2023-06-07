@@ -60,9 +60,9 @@ export const ExternalLinkWidget = ({ cover, size, url, text, brand }: WidgetProp
                 <div className='mt-1 text-xs text-domain  whitespace-pre-wrap'>{domain}</div>
               </div>
             </div>
-            <div className="h-full aspect-[1.3/1] flex justify-center items-center overflow-hidden">
+            <div className="rounded-2xl h-full aspect-[1.3/1] flex justify-center items-center overflow-hidden">
               <Image
-                objectFit='cover'
+                className='w-full h-full object-cover'
                 src={cover}
                 width={undefined}
                 height={undefined}
@@ -84,9 +84,9 @@ export const ExternalLinkWidget = ({ cover, size, url, text, brand }: WidgetProp
               <div className='mt-1 text-xs text-domain  whitespace-pre-wrap'>{domain}</div>
             </div>
           </div>
-          <div className="h-full aspect-[1.3/1] flex justify-center items-center overflow-hidden">
+          <div className="rounded-2xl h-full aspect-[1.3/1] flex justify-center items-center overflow-hidden">
             <Image
-              objectFit='cover'
+              className='w-full h-full object-cover'
               src={cover}
               width={undefined}
               height={undefined}
