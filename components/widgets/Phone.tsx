@@ -12,7 +12,7 @@ export const PhoneWidget = ({size}: WidgetProps) => {
         <div className='w-6 h-6 flex justify-center items-center'>
             <Image src={PhoneIcon} alt={'Appointment on Phone'}></Image>
           </div>
-        <p className="text-md">Appointment on Phone!</p>
+        <p className="text-md">Appointment on Phone</p>
       </a>
     </>
   )

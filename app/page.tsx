@@ -22,7 +22,8 @@ import { WhatsappWidget } from '@/components/widgets/Whatsapp';
 import { ImageWidget } from '@/components/widgets/Image';
 import useWindowSize from '@/lib/hooks/use-window-size';
 import { useEffect } from 'react';
-import { ReviewsCarousal } from '@/components/widgets/ReviewsCarousal';
+import GoogleAnalyticsTag from '@/components/google_tracking/GoogleTag';
+import GooglePhoneScriptTag from '@/components/google_tracking/PhoneScript';
 
 export default function Home() {
 
@@ -31,16 +32,16 @@ export default function Home() {
   const sectionWidth = isMobile ? 1 : 2
 
   const data = (<>
-    <Item indicator height={1}><WhatsappWidget url={'https://wa.me/919820381015'} text='Appointment on WhatsApp!' size={1} /></Item>
+    <Item indicator height={1}><WhatsappWidget url={'https://wa.me/919820381015'} text='Appointment on WhatsApp' size={1} /></Item>
     <Item height={1}><PhoneWidget size={1} /></Item>
     <Item height={2}><ExternalLinkWidget cover={medicare} size={2} url={'https://goo.gl/maps/L2xvfXDYWJVYBmEK9'} text={'Lifeline Medicare Hospital'} brand={'googlebusiness'} /></Item>
     <Item height={1}><ExternalLinkWidget size={1} text={'+917039647409 Botim (UAE)'} brand={'botim'} url={''} cover={undefined} /></Item>
-    <Item height={1}><WhatsappWidget url={'https://wa.me/c/919820381015'} text='Offered Services on WhatsApp!' size={1} /></Item>
+    <Item height={1}><WhatsappWidget url={'https://wa.me/c/919820381015'} text='Offered Services on WhatsApp' size={1} /></Item>
     <Section width={sectionWidth}><TextWidget text='References' size={1} /></Section>
-    <Item height={2}><ExternalLinkWidget cover={justdial} size={2} url={'https://www.justdial.com/Mumbai/Dr-A-Kapoors-Diabetes-Control-Clinic-Lifeline-Medicare-Hospital-Goregaon-West-MTNL-Goregaon-West-Goregaon-West/022PXX22-XX22-160811174833-F2M7_BZDET'} text={'Dr Anuradha Kapoor, JustDial'} brand={'justdial'} /></Item>
     <Item height={2}><ExternalLinkWidget cover={practo} size={2} url={'https://www.practo.com/mumbai/clinic/dr-anuradha-kapoor-s-diabetes-care-clinic-malad-2'} text={'Dr Anuradha Kapoor, Practo'} brand={'practo'} /></Item>
     <Item height={2}><ExternalLinkWidget cover={linkedin} size={2} url={'https://www.linkedin.com/in/drakapoor'} text={'Dr Anuradha Kapoor, LinkedIn 15k Followers'} brand={'linkedin'} /></Item>
     <Item height={2}><ExternalLinkWidget cover={lybrate} size={2} url={'https://www.lybrate.com/mumbai/doctor/dr-anuradha-kapoor-diabetologist'} text={'Dr Anuradha Kapoor, Lybrate'} brand={'lybrate'} /></Item>
+    <Item height={2}><ExternalLinkWidget cover={justdial} size={2} url={'https://www.justdial.com/Mumbai/Dr-A-Kapoors-Diabetes-Control-Clinic-Lifeline-Medicare-Hospital-Goregaon-West-MTNL-Goregaon-West-Goregaon-West/022PXX22-XX22-160811174833-F2M7_BZDET'} text={'Dr Anuradha Kapoor, JustDial'} brand={'justdial'} /></Item>
     <Section width={sectionWidth}><TextWidget text='Dr Anuradha Kapoor MD, books for MBBS 📚' size={1} /></Section>
     <Item height={2}><ExternalLinkWidget cover={Book1} size={2} url={'https://www.amazon.in/Management-Diabetes-Mellitus-Vol-Complete-Practical-ebook/dp/B08951BB16'} text={'Diabetes Mellitus Book I'} brand={'amazon'} /></Item>
     <Item height={2}><ExternalLinkWidget cover={Book2} size={2} url={'https://www.amazon.in/Management-Diabetes-Mellitus-Vol-Complete-Practical-ebook/dp/B089515SN3'} text={'Diabetes Mellitus Book II'} brand={'amazon'} /></Item>
@@ -92,6 +93,8 @@ export default function Home() {
 
   return (
     <>
+      <GoogleAnalyticsTag />
+      <GooglePhoneScriptTag />
       <div id="home" className='flex justify-center'>
         {isMobile && <MobileLayout>
           {data}
