@@ -29,7 +29,7 @@ export default function Carousal({slides}: CarousalProps) {
         modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper w-full h-full"
       >
-        {slides.map(slide => <SwiperSlide>{slide}</SwiperSlide>)}
+        {slides.map((slide, index) => <SwiperSlide key={index}>{slide}</SwiperSlide>)}
       </Swiper>
     </>
   );
