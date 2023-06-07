@@ -41,7 +41,7 @@ export default function Home() {
     <Section width={sectionWidth}><TextWidget text='References' size={1} /></Section>
     <Item height={2}><ExternalLinkWidget cover={justdial} size={2} url={'https://www.justdial.com/Mumbai/Dr-A-Kapoors-Diabetes-Control-Clinic-Lifeline-Medicare-Hospital-Goregaon-West-MTNL-Goregaon-West-Goregaon-West/022PXX22-XX22-160811174833-F2M7_BZDET'} text={'Dr Anuradha Kapoor, JustDial'} brand={'justdial'} /></Item>
     <Item height={2}><ExternalLinkWidget cover={practo} size={2} url={'https://www.practo.com/mumbai/clinic/dr-anuradha-kapoor-s-diabetes-care-clinic-malad-2'} text={'Dr Anuradha Kapoor, Practo'} brand={'practo'} /></Item>
-    <Item height={2}><ExternalLinkWidget cover={linkedin} size={2} url={'https://www.linkedin.com/in/drakapoor'} text={'Dr Anuradha Kapoor, LinkedIn'} brand={'linkedin'} /></Item>
+    <Item height={2}><ExternalLinkWidget cover={linkedin} size={2} url={'https://www.linkedin.com/in/drakapoor'} text={'Dr Anuradha Kapoor, LinkedIn 15k Followers'} brand={'linkedin'} /></Item>
     <Item height={2}><ExternalLinkWidget cover={lybrate} size={2} url={'https://www.lybrate.com/mumbai/doctor/dr-anuradha-kapoor-diabetologist'} text={'Dr Anuradha Kapoor, Lybrate'} brand={'lybrate'} /></Item>
     <Section width={sectionWidth}><TextWidget text='Dr Anuradha Kapoor MD, books for MBBS 📚' size={1} /></Section>
     <Item height={2}><ExternalLinkWidget cover={Book1} size={2} url={'https://www.amazon.in/Management-Diabetes-Mellitus-Vol-Complete-Practical-ebook/dp/B08951BB16'} text={'Diabetes Mellitus Book I'} brand={'amazon'} /></Item>
