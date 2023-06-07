@@ -11,9 +11,8 @@ const GoogleAnalyticsTag = () => {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'AW-11198108742/ltFcCMHy2qYYEMao1tsp', {
-        'phone_conversion_number': '7039647409'
-      });
+
+      gtag('config', 'AW-11198108742');
     `;
 
     document.head.appendChild(script);
