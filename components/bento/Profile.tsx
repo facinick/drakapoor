@@ -19,7 +19,7 @@ export default function Profile({
         </figure>
 
       <div className='px-2 py-8'>
-        <div className='text-3xl xl:text-4xl font-bold' id="profile-title">Dr Anuradha Kapoor</div>
+        <h1 className='text-3xl xl:text-4xl font-bold' id="profile-title">Dr Anuradha Kapoor</h1>
         <div className='text-base xl:text-xl w-full h-auto mt-3 text-bio' id="profile-bio">
           <div className='w-full h-auto whitespace-pre-wrap'>
             <p className='mt-2'>👩‍⚕️ MD Diabetologist</p>

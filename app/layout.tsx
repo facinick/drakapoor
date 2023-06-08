@@ -2,20 +2,19 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import cx from "classnames";
 import { sfPro, inter } from "./fonts";
+import { isDev, isProd } from "@/lib/utils";
 
 export const metadata = {
   title: "Dr A Kapoor's Diabetes Control Clinic",
-  description: "Diabetes reversal, Diabetic complications, Blood sugar management, weight loss management , Thyroid health management",
+  description: "Diabetes reversal, Diabetic complications, Blood sugar management, Weight loss management , Thyroid health management",
   manifest: '/manifest.json',
   viewport: {
       width: 'device-width',
       initialScale: 1,
-      // maximumScale: 1,
-      
   },
   openGraph: {
     title: "Dr A Kapoor's Diabetes Control Clinic",
-    description: "Diabetes reversal, Diabetic complications, Blood sugar management, weight loss management , Thyroid health management",
+    description: "Diabetes reversal, Diabetic complications, Blood sugar management, Weight loss management , Thyroid health management",
     url: 'https://drakapoor.com',
     siteName: 'Dr A Kapoor Diabetes',
     images: [
@@ -23,6 +22,11 @@ export const metadata = {
         url: 'https://drakapoor.com/logo.png',
         width: 512,
         height: 512,
+      },
+      {
+        url: 'https://drakapoor.com/og_image.png',
+        width: 1200,
+        height: 800,
       },
       {
         url: 'https://drakapoor.com/icons/icon-192x192.png',
@@ -51,6 +55,7 @@ export const metadata = {
     icons: {
       icon: [{ url: '/logo.png' }],
       shortcut: ['/logo.png'],
+
       apple: [
         { url: '/apple-icon.png' },
         { url: '/apple-icon-180x180.png', sizes: '180x180', type: 'image/png' },
@@ -93,8 +98,8 @@ export const metadata = {
     },
   },
   creator: 'Shriyans Kapoor<facinick@gmail.com>',
-  keywords: ["Diabetes", "Diabetologist", "Mumbai", "Best Diabates Doctor", "Diabetes reversal", "Weight loss management", "Thyroid management"],
-  authors: [{ name: 'Dr Anuradha Kapoor' }, { name: 'Dr Anuradha Kapoor', url: 'https://drakapoor.com' }],
+  keywords: ["Diabetes", "Diabetologist", "Mumbai", "Best Diabates Doctor", "Diabetes reversal", "Weight loss management", "Thyroid management", "Blood sugar management", "Diabetes Care Physician and Thyroid specialist","Diabetes Mellitus Type 2","Type 2 Diabetes","Diabetes Type II","Thyroid Care","Type 1 diabetes","Juvenile diabetes","Insulin dependent diabetes","Insulin therapy","Diabetes Diet","Pre Diabetes","Insulin resistance","Blood glucose levels","Sugar levels","High blood pressure","Hypertension","Thyroid hormone resistance","Thyroid stimulating hormone","TSH","Hypothyroidism","Diabetes care","Thyroid care","Diabetes diet Management","Weight loss", "Preventive diabetes care","Reversal of diabetes","Diet and exercise packages","Lab services","Imaging services","Diabetes foot care"],
+  authors: [{ name: 'Dr Anuradha Kapoor', url: 'https://drakapoor.com' }],
   referrer: 'origin-when-cross-origin',
   colorScheme: 'light',
   themeColor: 'white',
@@ -104,13 +109,12 @@ export const metadata = {
     telephone: true,
   },
   robots: {
-    index: false,
+    index: true,
     follow: true,
     nocache: true,
     googleBot: {
       index: true,
-      follow: false,
-      noimageindex: true,
+      follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
@@ -124,11 +128,13 @@ export default async function RootLayout({
   children: React.ReactNode;
   }) {
   
+  console.log(`env: ${isProd()? "prod" : isDev() ? "dev" : "unknown"}`)
+  
   return (
     <html lang="en">
       <body className={cx(sfPro.variable, inter.variable)}>
         {children}
-        <Analytics />
+        {isProd() && <Analytics />}
       </body>
     </html>
   );
