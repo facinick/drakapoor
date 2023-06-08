@@ -3,7 +3,7 @@ import { useEffect } from "react";
 const GoogleAnalyticsTag = () => {
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-11198108742';
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-5SP2Q91069';
     script.async = true;
 
     const configScript = document.createElement('script');
@@ -12,7 +12,7 @@ const GoogleAnalyticsTag = () => {
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'AW-11198108742');
+      gtag('config', 'G-5SP2Q91069');
     `;
 
     document.head.appendChild(script);

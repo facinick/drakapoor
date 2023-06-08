@@ -94,7 +94,7 @@ export default function Home() {
   return (
     <>
       <GoogleAnalyticsTag />
-      <GooglePhoneScriptTag />
+      {/* <GooglePhoneScriptTag /> */}
       <div id="home" className='flex justify-center'>
         {isMobile && <MobileLayout>
           {data}
