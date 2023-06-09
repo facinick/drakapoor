@@ -34,7 +34,9 @@ export default function Home() {
 
   const data = (<>
     <Item indicator height={1}><WhatsappWidget url={'https://wa.me/919820381015'} text='Appointment on WhatsApp' size={1} /></Item>
-    <Item height={1}><PhoneWidget size={1} /></Item>
+     <Section width={sectionWidth}><TextWidget tag='h2' text='Over 250+ ⭐️⭐️⭐️⭐️⭐️ Reviews on Google' size={1} /></Section>
+    <Item interactionAnimation={false} height={4}><ReviewsCarousal /></Item>
+    <Item height={1}><PhoneWidget url={'tel:+917039647409'} text={"Appointment on Phone"} size={1} /></Item>
     <Item height={2}><ExternalLinkWidget cover={medicare} size={2} url={'https://goo.gl/maps/ruWqJkW9XzQSkHtcA'} text={'Lifeline Medicare Hospital'} brand={'googlebusiness'} /></Item>
     <Item height={1}><ExternalLinkWidget size={1} text={'+91 703,964,7409 Botim (UAE)'} brand={'botim'} url={''} cover={undefined} /></Item>
     <Item height={1}><WhatsappWidget url={'https://wa.me/c/919820381015'} text='Offered Services on WhatsApp' size={1} /></Item>
@@ -46,10 +48,9 @@ export default function Home() {
     <Section width={sectionWidth}><TextWidget tag='h2' text='Dr Anuradha Kapoor MD, books for MBBS 📚' size={1} /></Section>
     <Item height={2}><ExternalLinkWidget cover={Book1} size={2} url={'https://www.amazon.in/Management-Diabetes-Mellitus-Vol-Complete-Practical-ebook/dp/B08951BB16'} text={'Diabetes Mellitus Book I'} brand={'amazon'} /></Item>
     <Item height={2}><ExternalLinkWidget cover={Book2} size={2} url={'https://www.amazon.in/Management-Diabetes-Mellitus-Vol-Complete-Practical-ebook/dp/B089515SN3'} text={'Diabetes Mellitus Book II'} brand={'amazon'} /></Item>
-    <Section width={sectionWidth}><TextWidget tag='h2' text='Over 250+ ⭐️⭐️⭐️⭐️⭐️ Reviews on Google' size={1} /></Section>
+   
     {/* <Item height={4}><ImageWidget image={googlerating1} description={'google rating 5'} /></Item>
     <Item height={4}><ImageWidget image={googlerating2} description={'google rating 5'} /></Item> */}
-    <Item interactionAnimation={false} height={4}><ReviewsCarousal /></Item>
     {/* <Section width={sectionWidth}><TextWidget tag='h2' text='Short videos 🎬' size={1} /></Section>
     <Item height={2}><ExternalLinkWidget cover={youtube1} size={2} url={'https://www.youtube.com/watch?v=SeR_31iwrA8&t=6s'} text={'Meet Dr Anuradha Kapoor'} brand={'youtube'} /></Item>
     <Item height={2}><ExternalLinkWidget cover={youtube2} size={2} url={'https://www.youtube.com/watch?v=L0IzTiAa4oc'} text={'Dr. Anuradha Kapoor (Strong Bones)'} brand={'youtube'} /></Item>

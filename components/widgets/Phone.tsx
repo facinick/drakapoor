@@ -4,15 +4,21 @@ interface WidgetProps {
   size: 1 | 2 | 4
 }
 
-export const PhoneWidget = ({size}: WidgetProps) => {
+interface PhoneProps {
+  url: string
+  text: string
+}
+
+
+export const PhoneWidget = ({size, url, text}: WidgetProps & PhoneProps) => {
 
   return (
     <>
-      <a rel="noreferrer" target='_blank' href='tel:+917039647409' className="w-full h-full flex justify-center items-center gap-3 transition-all">
+      <a rel="noreferrer" target='_blank' href={url} className="w-full h-full flex justify-center items-center gap-3 transition-all">
         <div className='w-6 h-6 flex justify-center items-center'>
-            <Image src={PhoneIcon} alt={'Appointment on Phone'}></Image>
+            <Image src={PhoneIcon} alt={text}></Image>
           </div>
-        <p className="text-md">Appointment on Phone</p>
+        <p className="text-md">{ text}</p>
       </a>
     </>
   )
