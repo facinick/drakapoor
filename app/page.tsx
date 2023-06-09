@@ -34,7 +34,7 @@ export default function Home() {
   const data = (<>
     <Item indicator height={1}><WhatsappWidget url={'https://wa.me/919820381015'} text='Appointment on WhatsApp' size={1} /></Item>
     <Item height={1}><PhoneWidget size={1} /></Item>
-    <Item height={2}><ExternalLinkWidget cover={medicare} size={2} url={'https://goo.gl/maps/L2xvfXDYWJVYBmEK9'} text={'Lifeline Medicare Hospital'} brand={'googlebusiness'} /></Item>
+    <Item height={2}><ExternalLinkWidget cover={medicare} size={2} url={'https://goo.gl/maps/ruWqJkW9XzQSkHtcA'} text={'Lifeline Medicare Hospital'} brand={'googlebusiness'} /></Item>
     <Item height={1}><ExternalLinkWidget size={1} text={'+917039647409 Botim (UAE)'} brand={'botim'} url={''} cover={undefined} /></Item>
     <Item height={1}><WhatsappWidget url={'https://wa.me/c/919820381015'} text='Offered Services on WhatsApp' size={1} /></Item>
     <Section width={sectionWidth}><TextWidget tag='h2' text='References' size={1} /></Section>
