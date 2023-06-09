@@ -24,7 +24,7 @@ export default function Profile({
           <div className='w-full h-auto whitespace-pre-wrap'>
             <p className='mt-2'>👩‍⚕️ MD Diabetologist</p>
             <p className='mt-2'>🇮🇳 Goregaon, Mumbai, India.</p>
-            <p className='mt-2'>Passonate about preventive diabetes care. MBBS, MD, PG Diploma in Clinical Endocrinology and Diabetes. Fellowship in Diabetes Apollo Hospital. Dedicated to leaste medicines, improved lifestyle and prevent organ complications.</p>
+            <p className='mt-2'>Passonate about preventive diabetes care. MBBS, MD, PG Diploma in Clinical Endocrinology and Diabetes. Fellowship in Diabetes Apollo Hospital. Dedicated to reducing medicines by improving lifestyles for the last 25 years.</p>
           </div>
         </div>
       </div>
