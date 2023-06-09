@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import cx from "classnames";
-import { sfPro, inter } from "./fonts";
+import {roboto } from "./fonts";
 import { isDev, isProd } from "@/lib/utils";
 
 export const metadata = {
@@ -127,12 +127,10 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
   }) {
-  
-  console.log(`env: ${isProd()? "prod" : isDev() ? "dev" : "unknown"}`)
-  
+    
   return (
     <html lang="en">
-      <body className={cx(sfPro.variable, inter.variable)}>
+      <body className={cx(roboto.className)}>
         {children}
         {isProd() && <Analytics />}
       </body>

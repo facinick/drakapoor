@@ -12,7 +12,8 @@ module.exports = {
       colors: {
         'bio': '#565656',
         'domain': 'rgba(0,0,0,.6)',
-        'button-dim': '#f6f6f6'
+        'button-dim': '#f6f6f6',
+        'date': 'rgba(0,0,0,.6)'
       },
       height: {
         'full-calc': 'calc(100%)',
@@ -20,6 +21,7 @@ module.exports = {
       fontFamily: {
         display: ["var(--font-sf)", "system-ui", "sans-serif"],
         default: ["var(--font-inter)", "system-ui", "sans-serif"],
+        roboto: ['var(--font-roboto)'],
       },
       animation: {
         // Fade up and down

@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import { Pagination, Autoplay, Navigation } from "swiper";
+import { Pagination, Autoplay, Navigation, EffectCards } from "swiper";
 
 interface CarousalProps {
   slides: Array<React.ReactNode>
@@ -19,13 +19,12 @@ export default function Carousal({slides}: CarousalProps) {
         spaceBetween={30}
         loop={true}
         pagination={{
-          clickable: true,
+          clickable: false,
         }}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
         }}
-        // navigation={true}
         modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper w-full h-full"
       >
