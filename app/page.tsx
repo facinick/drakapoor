@@ -3,28 +3,20 @@ import Item from '@/components/bento/Item';
 import LaptopLayout from '@/components/bento/LaptopLayout';
 import MobileLayout from '@/components/bento/MobileLayout';
 import Section from '@/components/bento/Section';
-import Book1 from '@/components/icons/book1.jpg'
-import Book2 from '@/components/icons/book2.jpg'
-import youtube1 from '@/components/covers/youtube1.png'
-import youtube2 from '@/components/covers/youtube2.png'
-import medicare from '@/components/covers/medicare.png'
-import youtube3 from '@/components/covers/youtube3.png'
-import practo from '@/components/covers/practo.png'
-import lybrate from '@/components/covers/lybrate.png'
-import justdial from '@/components/covers/justdial.png'
-import linkedin from '@/components/covers/linkedin.png'
-import googlerating1 from '@/components/images/googlerating1.png'
-import googlerating2 from '@/components/images/googlerating2.png'
+import justdial from '@/components/covers/justdial.png';
+import linkedin from '@/components/covers/linkedin.png';
+import lybrate from '@/components/covers/lybrate.png';
+import medicare from '@/components/covers/medicare.png';
+import practo from '@/components/covers/practo.png';
+import Book1 from '@/components/icons/book1.jpg';
+import Book2 from '@/components/icons/book2.jpg';
 import { ExternalLinkWidget } from '@/components/widgets/ExternalLink';
 import { PhoneWidget } from '@/components/widgets/Phone';
+import { ReviewsCarousal } from '@/components/widgets/ReviewsCarousal';
 import { TextWidget } from '@/components/widgets/Text';
 import { WhatsappWidget } from '@/components/widgets/Whatsapp';
-import { ImageWidget } from '@/components/widgets/Image';
 import useWindowSize from '@/lib/hooks/use-window-size';
 import { useEffect } from 'react';
-import GoogleAnalyticsTag from '@/components/google_tracking/GoogleTag';
-import { isDev, isProd } from '@/lib/utils';
-import { ReviewsCarousal } from '@/components/widgets/ReviewsCarousal';
 
 export default function Home() {
 
@@ -95,7 +87,7 @@ export default function Home() {
 
   return (
     <>
-      {isProd() && <GoogleAnalyticsTag />}
+      {/* {isProd() && <GoogleAnalyticsTag />} */}
       <div id="home" className='flex justify-center'>
         {isMobile && <MobileLayout>
           {data}

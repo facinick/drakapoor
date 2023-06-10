@@ -1,11 +1,12 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-import { Pagination, Autoplay, Navigation, EffectCards } from "swiper";
+
+import { Autoplay, Navigation, Pagination } from "swiper";
 
 interface CarousalProps {
   slides: Array<React.ReactNode>
