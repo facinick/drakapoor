@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import ProfileImg from '../icons/profile.png'
+import ProfileImg from '../icons/profile.png';
 export default function Profile({
   iconSize
 }: {
@@ -24,7 +24,7 @@ export default function Profile({
           <div className='w-full h-auto whitespace-pre-wrap'>
             <p className='mt-2'>👩‍⚕️ MD Diabetologist</p>
             <p className='mt-2'>🇮🇳 Goregaon, Mumbai, India.</p>
-            <p className='mt-2'>Passonate about preventive diabetes care. MBBS, MD, PG Diploma in Clinical Endocrinology and Diabetes. Fellowship in Diabetes Apollo Hospital. Dedicated to reducing medicines by improving lifestyles for the last 25 years.</p>
+            <p className='mt-2'>Passionate about preventive diabetes care. MBBS, MD, PG Diploma in Clinical Endocrinology and Diabetes. Fellowship in Diabetes from Apollo Hospital. Dedicated to reducing diabetic medicines, by improving patient lifestyles for the last 25 years.</p>
           </div>
         </div>
       </div>
