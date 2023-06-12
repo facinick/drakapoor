@@ -1,5 +1,6 @@
-import PhoneIcon from '@/components/icons/phone.svg'
+import PhoneIcon from '@/components/icons/phone.svg';
 import Image from 'next/image';
+import { trackLinkClick } from '../utils/analytics';
 interface WidgetProps {
   size: 1 | 2 | 4
 }
@@ -14,7 +15,7 @@ export const PhoneWidget = ({size, url, text}: WidgetProps & PhoneProps) => {
 
   return (
     <>
-      <a rel="noreferrer" target='_blank' href={url} className="w-full h-full flex justify-center items-center gap-3 transition-all">
+      <a onClick={() => trackLinkClick("phone-call-button")} rel="noreferrer" target='_blank' href={url} className="w-full h-full flex justify-center items-center gap-3 transition-all">
         <div className='w-6 h-6 flex justify-center items-center'>
             <Image src={PhoneIcon} alt={text}></Image>
           </div>

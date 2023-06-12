@@ -1,7 +1,8 @@
-import Image from "next/image"
-import Carousal from "../ui/Carousal";
+import Image from "next/image";
+import google from '../data/google.png';
 import { reviews } from "../data/reviews";
-import google from '../data/google.png'
+import Carousal from "../ui/Carousal";
+import { trackLinkClick } from "../utils/analytics";
 const RatingComponent = ({ rating }: { rating: number }) => {
 
   const stars = [];
@@ -30,7 +31,7 @@ export const ReviewsCarousal = () => {
     })
 
     return (
-      <a key={index} href={review.url} rel="noreferrer" target='_blank' >
+      <a onClick={() => trackLinkClick("review-button", {url: review.url})} key={index} href={review.url} rel="noreferrer" target='_blank' >
         <div  className="relative w-full h-full">
           <div className="absolute w-full h-full flex items-center flex-col">
             <div className="w-full h-full p-4 overflow-hidden flex flex-col gap-5">

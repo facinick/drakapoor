@@ -28,7 +28,7 @@ export default function Home() {
 
   const data = (<>
     <Item indicator height={1}><WhatsappWidget url={'https://wa.me/919820381015'} text='Appointment on WhatsApp' size={1} /></Item>
-     <Section width={sectionWidth}><TextWidget tag='h2' text='Over 250+ ⭐️⭐️⭐️⭐️⭐️ Reviews on Google' size={1} /></Section>
+     <Section width={sectionWidth}><TextWidget tag='h2' text='Over 200+ ⭐️⭐️⭐️⭐️⭐️ Reviews on Google' size={1} /></Section>
     <Item interactionAnimation={false} height={4}><ReviewsCarousal /></Item>
     <Item height={1}><PhoneWidget url={'tel:+919820381015'} text={"Appointment on Phone"} size={1} /></Item>
     <Item height={2}><ExternalLinkWidget cover={medicare} size={2} url={'https://goo.gl/maps/ruWqJkW9XzQSkHtcA'} text={'Lifeline Medicare Hospital'} brand={'googlebusiness'} /></Item>
