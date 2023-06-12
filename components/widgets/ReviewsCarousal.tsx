@@ -30,8 +30,12 @@ export const ReviewsCarousal = () => {
       year: 'numeric',
     })
 
+    const onClick = () => {
+      trackLinkClick("review-click", {url: review.url})
+    }
+
     return (
-      <a onClick={() => trackLinkClick("review-button", {url: review.url})} key={index} href={review.url} rel="noreferrer" target='_blank' >
+      <a onClick={onClick} key={index} href={review.url} rel="noreferrer" target='_blank' >
         <div  className="relative w-full h-full">
           <div className="absolute w-full h-full flex items-center flex-col">
             <div className="w-full h-full p-4 overflow-hidden flex flex-col gap-5">

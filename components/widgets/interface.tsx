@@ -1,8 +1,8 @@
-import { AnalyticsEventObject } from "../utils/analytics"
+import { AnalyticsProps } from "../utils/analytics"
 
 interface WidgetProps {
     size: 1 | 2 | 4
-    analyticsEventObject?: AnalyticsEventObject
+    analyticsProps?: AnalyticsProps
   }
 
   export type { WidgetProps }

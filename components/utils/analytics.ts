@@ -1,23 +1,18 @@
-interface AnalyticsEventObject {
-    event_category: 'Link';
-    event_label: string;
-    data?: Record<string, string>;
-  }
-  
+interface AnalyticsProps {
+    eventName: string
+    data?: Record<string, string>
+}
 
-function trackLinkClick(linkName: string, data?: Record<string, string>) {
-    const eventObject: AnalyticsEventObject = {
-        'event_category': 'Link',
-        'event_label': linkName
-      };
+function trackLinkClick(eventName: string, data?: Record<string, string>) {
     
       if (data) {
-        eventObject['data'] = data;
+        gtag('event', eventName, data);
       }
-    
-      gtag('event', 'link_click', eventObject);
+
+      else {
+        gtag('event', eventName);
+      }
   }
 
-export { trackLinkClick };
-export type { AnalyticsEventObject };
+export { trackLinkClick, type AnalyticsProps };
 

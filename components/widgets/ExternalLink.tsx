@@ -1,11 +1,9 @@
 
 import Image from 'next/image';
+import { trackLinkClick } from '../utils/analytics';
 import { BRANDS, getBrandStuff } from '../utils/constants';
 import { extractDomain } from '../utils/string';
-
-interface WidgetProps {
-  size: 1 | 2 | 4
-}
+import { WidgetProps } from './interface';
 
 interface ExternalLinkProps {
   url: string
@@ -14,7 +12,7 @@ interface ExternalLinkProps {
   cover: any
 }
 
-export const ExternalLinkWidget = ({ cover, size, url, text, brand }: WidgetProps & ExternalLinkProps) => {
+export const ExternalLinkWidget = ({ cover, size, url, text, brand, analyticsProps }: WidgetProps & ExternalLinkProps) => {
 
   const { image, bgColor, fgColor } = getBrandStuff(brand)
   let href = url
@@ -22,6 +20,12 @@ export const ExternalLinkWidget = ({ cover, size, url, text, brand }: WidgetProp
   if (!url) {
     href = "#"
     domain = "drakapoor.com"
+  }
+
+  const onClick = () => {
+    if(analyticsProps) {
+      trackLinkClick(analyticsProps.eventName, analyticsProps.data)
+    }
   }
 
   switch (size) {
@@ -39,7 +43,7 @@ export const ExternalLinkWidget = ({ cover, size, url, text, brand }: WidgetProp
       }
 
       return (<>
-        <a rel="noreferrer" target='_blank' href={href} className="w-full h-full flex justify-center items-center gap-3 transition-all">
+        <a onClick={onClick} rel="noreferrer" target='_blank' href={href} className="w-full h-full flex justify-center items-center gap-3 transition-all">
           <div className='w-8 h-8 flex justify-center items-center'>
             <Image src={image} alt={text}></Image>
           </div>
@@ -74,7 +78,7 @@ export const ExternalLinkWidget = ({ cover, size, url, text, brand }: WidgetProp
       }
 
       return (<>
-        <a style={{ backgroundColor: bgColor }} rel="noreferrer" target='_blank' href={href} className={`p-4 w-full h-full flex justify-center items-center gap-3 transition-all bg-[${bgColor}]`}>
+        <a onClick={onClick} style={{ backgroundColor: bgColor }} rel="noreferrer" target='_blank' href={href} className={`p-4 w-full h-full flex justify-center items-center gap-3 transition-all bg-[${bgColor}]`}>
           <div className='w-[140px] h-full'>
             <div className='rounded-lg overflow-hidden w-10 h-10 flex justify-center items-center'>
               <Image src={image} alt={text}></Image>
