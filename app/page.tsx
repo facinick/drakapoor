@@ -8,6 +8,7 @@ import linkedin from '@/components/covers/linkedin.png';
 import lybrate from '@/components/covers/lybrate.png';
 import medicare from '@/components/covers/medicare.png';
 import practo from '@/components/covers/practo.png';
+import GoogleAnalyticsTag from '@/components/google_tracking/GoogleTag';
 import Book1 from '@/components/icons/book1.jpg';
 import Book2 from '@/components/icons/book2.jpg';
 import { ExternalLinkWidget } from '@/components/widgets/ExternalLink';
@@ -16,6 +17,7 @@ import { ReviewsCarousal } from '@/components/widgets/ReviewsCarousal';
 import { TextWidget } from '@/components/widgets/Text';
 import { WhatsappWidget } from '@/components/widgets/Whatsapp';
 import useWindowSize from '@/lib/hooks/use-window-size';
+import { isProd } from '@/lib/utils';
 import { useEffect } from 'react';
 
 export default function Home() {
@@ -87,7 +89,7 @@ export default function Home() {
 
   return (
     <>
-      {/* {isProd() && <GoogleAnalyticsTag />} */}
+            {isProd() && <GoogleAnalyticsTag />}
       <div id="home" className='flex justify-center'>
         {isMobile && <MobileLayout>
           {data}

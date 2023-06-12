@@ -1,8 +1,8 @@
-import "./globals.css";
+import { isProd } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
 import cx from "classnames";
-import {roboto } from "./fonts";
-import { isDev, isProd } from "@/lib/utils";
+import { roboto } from "./fonts";
+import "./globals.css";
 
 export const metadata = {
   title: "Dr A Kapoor's Diabetes Control Clinic",
