@@ -90,7 +90,6 @@ export default function Home() {
 
   return (
     <>
-      {<Faq />}
       {isProd() && <GoogleAnalyticsTag />}
       {isProd() && <Faq />}
       <div id="home" className='flex justify-center'>
