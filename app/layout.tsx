@@ -6,7 +6,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "Dr A Kapoor's Diabetes Control Clinic",
-  description: "Diabetes remission, Diabetic complications, Blood sugar management, Weight loss management , Thyroid health management",
+  description: "Diabetes remission, Diabetic complications, Blood sugar management, Weight loss management, Thyroid health management",
   manifest: '/manifest.json',
   viewport: {
       width: 'device-width',
@@ -14,7 +14,7 @@ export const metadata = {
   },
   openGraph: {
     title: "Dr A Kapoor's Diabetes Control Clinic",
-    description: "Diabetes remission, Diabetic complications, Blood sugar management, Weight loss management , Thyroid health management",
+    description: "Diabetes remission, Diabetic complications, Blood sugar management, Weight loss management, Thyroid health management",
     url: 'https://drakapoor.com',
     siteName: 'Dr A Kapoor Diabetes',
     images: [
