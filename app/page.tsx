@@ -35,7 +35,7 @@ export default function Home() {
     <Item height={2}><ExternalLinkWidget analyticsProps={{ eventName: "location_click" }} cover={medicare} size={2} url={'https://goo.gl/maps/ruWqJkW9XzQSkHtcA'} text={'Lifeline Medicare Hospital'} brand={'googlebusiness'} /></Item>
     {/* <Item height={1}><ExternalLinkWidget analyticsProps={{ eventName: "botim_click" }} size={1} text={'+91 703,964,7409 Botim (UAE)'} brand={'botim'} url={''} cover={undefined} /></Item> */}
     <Item height={1}><WhatsappWidget analyticsProps={{ eventName: "whatsapp_catalog_click" }} url={'https://wa.me/c/919820381015'} text='Offered Services on WhatsApp' size={1} /></Item>
-    <Section width={sectionWidth}><TextWidget tag='h2' text='References' size={1} /></Section>
+    <Section width={sectionWidth}><TextWidget tag='h2' text='Social' size={1} /></Section>
     <Item height={2}><ExternalLinkWidget analyticsProps={{ eventName: "practo_click" }} cover={practo} size={2} url={'https://www.practo.com/mumbai/clinic/dr-anuradha-kapoor-s-diabetes-care-clinic-malad-2'} text={'Dr Anuradha Kapoor, Practo'} brand={'practo'} /></Item>
     <Item height={2}><ExternalLinkWidget analyticsProps={{ eventName: "linkedin_click" }} cover={linkedin} size={2} url={'https://www.linkedin.com/in/drakapoor'} text={'Dr Anuradha Kapoor, LinkedIn 15k Followers'} brand={'linkedin'} /></Item>
     <Item height={2}><ExternalLinkWidget analyticsProps={{ eventName: "lybrate_click" }} cover={lybrate} size={2} url={'https://www.lybrate.com/mumbai/doctor/dr-anuradha-kapoor-diabetologist'} text={'Dr Anuradha Kapoor, Lybrate'} brand={'lybrate'} /></Item>
