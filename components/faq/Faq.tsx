@@ -1,10 +1,8 @@
-"use-client"
 import { FAQ } from '@/components/data/faq';
-import React, { useEffect } from "react";
+import Script from 'next/script';
 
-const Faq = () => {
-
-    const structuredData = React.useMemo(() => ({
+export default function Faq() {
+    const structuredData = {
         "@context": "http://schema.org",
         "@type": "FAQPage",
         "mainEntity": FAQ.map(item => ({
@@ -15,21 +13,14 @@ const Faq = () => {
                 "text": item.Answer
             }
         }))
-    }), [])
+    };
 
-    useEffect(() => {
-        const faqScript = document.createElement('script');
-        faqScript.type = "application/ld+json"
-        faqScript.innerHTML = JSON.stringify(structuredData);
-        document.head.appendChild(faqScript);
-
-        return () => {
-            // Cleanup the added script when the component unmounts
-            document.head.removeChild(faqScript);
-        };
-    }, []);
-
-    return null;
-};
-
-export default Faq;
+    return (
+        <Script 
+            id="faq-schema"
+            type="application/ld+json"
+        >
+            {JSON.stringify(structuredData)}
+        </Script>
+    );
+}

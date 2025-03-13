@@ -90,8 +90,6 @@ export default function Home() {
 
   return (
     <>
-      {isProd() && <GoogleAnalyticsTag />}
-      {isProd() && <Faq />}
       <div id="home" className='flex justify-center'>
         {isMobile && <MobileLayout>
           {data}

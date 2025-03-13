@@ -3,121 +3,175 @@ import { Analytics } from "@vercel/analytics/react";
 import cx from "classnames";
 import { roboto } from "./fonts";
 import "./globals.css";
+import {
+  GoogleTagManagerHead,
+  GoogleTagManagerBody,
+} from "@/components/google_tracking/GoogleTagManager";
+import Faq from "@/components/faq/Faq";
 
 export const metadata = {
   title: "Dr A Kapoor's Diabetes Control Clinic",
-  description: "Expert diabetes care and management in Mumbai. Specializing in diabetes reversal, blood sugar management, weight loss, and thyroid health. Book your consultation with Dr. Anuradha Kapoor today.",
-  manifest: '/manifest.json',
+  description:
+    "Expert diabetes care and management in Mumbai. Specializing in diabetes reversal, blood sugar management, weight loss, and thyroid health. Book your consultation with Dr. Anuradha Kapoor today.",
+  manifest: "/manifest.json",
   viewport: {
-    width: 'device-width',
+    width: "device-width",
     initialScale: 1,
     maximumScale: 1,
     userScalable: false,
   },
   openGraph: {
     title: "Dr A Kapoor's Diabetes Control Clinic",
-    description: "Diabetes remission, Diabetic complications, Blood sugar management, Weight loss management, Thyroid health management",
-    url: 'https://drakapoor.com',
-    siteName: 'Dr A Kapoor Diabetes',
+    description:
+      "Diabetes remission, Diabetic complications, Blood sugar management, Weight loss management, Thyroid health management",
+    url: "https://drakapoor.com",
+    siteName: "Dr A Kapoor Diabetes",
     images: [
       {
-        url: 'https://drakapoor.com/logo.png',
+        url: "https://drakapoor.com/logo.png",
         width: 512,
         height: 512,
       },
       {
-        url: 'https://drakapoor.com/og_image.png',
+        url: "https://drakapoor.com/og_image.png",
         width: 1200,
         height: 800,
       },
       {
-        url: 'https://drakapoor.com/icons/icon-192x192.png',
+        url: "https://drakapoor.com/icons/icon-192x192.png",
         width: 192,
         height: 192,
       },
       {
-        url: 'https://drakapoor.com/icons/icon-256x256.png',
+        url: "https://drakapoor.com/icons/icon-256x256.png",
         width: 256,
         height: 256,
       },
       {
-        url: 'https://drakapoor.com/icons/icon-384x384.png',
+        url: "https://drakapoor.com/icons/icon-384x384.png",
         width: 384,
         height: 384,
       },
       {
-        url: 'https://drakapoor.com/icons/icon-512x512.png',
+        url: "https://drakapoor.com/icons/icon-512x512.png",
         width: 512,
         height: 512,
       },
     ],
-    authors: ['Dr Anuradha Kapoor'],
-    locale: 'en_US',
-    type: 'website',
+    authors: ["Dr Anuradha Kapoor"],
+    locale: "en_US",
+    type: "website",
     icons: {
-      icon: [{ url: '/logo.png' }],
-      shortcut: ['/logo.png'],
+      icon: [{ url: "/logo.png" }],
+      shortcut: ["/logo.png"],
 
       apple: [
-        { url: '/apple-icon.png' },
-        { url: '/apple-icon-180x180.png', sizes: '180x180', type: 'image/png' },
-        { url: '/apple-icon-152x152.png', sizes: '152x152', type: 'image/png' },
-        { url: '/apple-icon-144x144.png', sizes: '144x144', type: 'image/png' },
-        { url: '/apple-icon-120x120.png', sizes: '120x120', type: 'image/png' },
-        { url: '/apple-icon-114x114.png', sizes: '114x114', type: 'image/png' },
-        { url: '/apple-icon-76x76.png', sizes: '76x76', type: 'image/png' },
-        { url: '/apple-icon-72x72.png', sizes: '72x72', type: 'image/png' },
-        { url: '/apple-icon-57x57.png', sizes: '57x57', type: 'image/png' },
+        { url: "/apple-icon.png" },
+        { url: "/apple-icon-180x180.png", sizes: "180x180", type: "image/png" },
+        { url: "/apple-icon-152x152.png", sizes: "152x152", type: "image/png" },
+        { url: "/apple-icon-144x144.png", sizes: "144x144", type: "image/png" },
+        { url: "/apple-icon-120x120.png", sizes: "120x120", type: "image/png" },
+        { url: "/apple-icon-114x114.png", sizes: "114x114", type: "image/png" },
+        { url: "/apple-icon-76x76.png", sizes: "76x76", type: "image/png" },
+        { url: "/apple-icon-72x72.png", sizes: "72x72", type: "image/png" },
+        { url: "/apple-icon-57x57.png", sizes: "57x57", type: "image/png" },
       ],
       android: [
-        { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
-        { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
-        { url: '/android-icon-192x192.png', sizes: '192x192', type: 'image/png' },
-        { url: '/android-icon-144x144.png', sizes: '144x144', type: 'image/png' },
-        { url: '/android-icon-96x96.png', sizes: '96x96', type: 'image/png' },
-        { url: '/android-icon-72x72.png', sizes: '72x72', type: 'image/png' },
-        { url: '/android-icon-48x48.png', sizes: '48x48', type: 'image/png' },
-        { url: '/android-icon-36x36.png', sizes: '36x36', type: 'image/png' },
+        {
+          url: "/android-chrome-192x192.png",
+          sizes: "192x192",
+          type: "image/png",
+        },
+        {
+          url: "/android-chrome-512x512.png",
+          sizes: "512x512",
+          type: "image/png",
+        },
+        {
+          url: "/android-icon-192x192.png",
+          sizes: "192x192",
+          type: "image/png",
+        },
+        {
+          url: "/android-icon-144x144.png",
+          sizes: "144x144",
+          type: "image/png",
+        },
+        { url: "/android-icon-96x96.png", sizes: "96x96", type: "image/png" },
+        { url: "/android-icon-72x72.png", sizes: "72x72", type: "image/png" },
+        { url: "/android-icon-48x48.png", sizes: "48x48", type: "image/png" },
+        { url: "/android-icon-36x36.png", sizes: "36x36", type: "image/png" },
       ],
       other: {
-        rel: 'apple-touch-icon-precomposed',
-        url: '/apple-icon-precomposed.png',
+        rel: "apple-touch-icon-precomposed",
+        url: "/apple-icon-precomposed.png",
       },
     },
 
-     appleWebApp: {
-      title: 'Dr Anuradha Kapoor Diabetes',
-      statusBarStyle: 'white-translucent',
+    appleWebApp: {
+      title: "Dr Anuradha Kapoor Diabetes",
+      statusBarStyle: "white-translucent",
     },
-     category: 'Health and Fitness',
+    category: "Health and Fitness",
   },
 
-  metadataBase: new URL('https://drakapoor.com'),
+  metadataBase: new URL("https://drakapoor.com"),
   alternates: {
-    canonical: '/',
+    canonical: "/",
     languages: {
-      'en-US': '/en-US',
+      "en-US": "/en-US",
     },
   },
-  creator: 'Shriyans Kapoor<facinick@gmail.com>',
+  creator: "Shriyans Kapoor<facinick@gmail.com>",
   keywords: [
-    "Diabetes", "Diabetologist", "Mumbai", "Best Diabetes Doctor", "Diabetes reversal", 
-    "Weight loss management", "Thyroid management", "Blood sugar management", 
-    "Diabetes Care Physician and Thyroid specialist", "Diabetes Mellitus Type 2",
-    "Type 2 Diabetes", "Diabetes Type II", "Thyroid Care", "Type 1 diabetes",
-    "Juvenile diabetes", "Insulin dependent diabetes", "Insulin therapy",
-    "Diabetes Diet", "Pre Diabetes", "Insulin resistance", "Blood glucose levels",
-    "Sugar levels", "High blood pressure", "Hypertension", "Thyroid hormone resistance",
-    "Thyroid stimulating hormone", "TSH", "Hypothyroidism", "Diabetes care",
-    "Thyroid care", "Diabetes diet Management", "Weight loss", "Preventive diabetes care",
-    "Reversal of diabetes", "Diet and exercise packages", "Lab services",
-    "Imaging services", "Diabetes foot care", "Mumbai Diabetologist", "Diabetes Specialist Mumbai",
-    "Best Diabetes Doctor in Mumbai", "Diabetes Treatment Mumbai", "Thyroid Specialist Mumbai"
+    "Diabetes",
+    "Diabetologist",
+    "Mumbai",
+    "Best Diabetes Doctor",
+    "Diabetes reversal",
+    "Weight loss management",
+    "Thyroid management",
+    "Blood sugar management",
+    "Diabetes Care Physician and Thyroid specialist",
+    "Diabetes Mellitus Type 2",
+    "Type 2 Diabetes",
+    "Diabetes Type II",
+    "Thyroid Care",
+    "Type 1 diabetes",
+    "Juvenile diabetes",
+    "Insulin dependent diabetes",
+    "Insulin therapy",
+    "Diabetes Diet",
+    "Pre Diabetes",
+    "Insulin resistance",
+    "Blood glucose levels",
+    "Sugar levels",
+    "High blood pressure",
+    "Hypertension",
+    "Thyroid hormone resistance",
+    "Thyroid stimulating hormone",
+    "TSH",
+    "Hypothyroidism",
+    "Diabetes care",
+    "Thyroid care",
+    "Diabetes diet Management",
+    "Weight loss",
+    "Preventive diabetes care",
+    "Reversal of diabetes",
+    "Diet and exercise packages",
+    "Lab services",
+    "Imaging services",
+    "Diabetes foot care",
+    "Mumbai Diabetologist",
+    "Diabetes Specialist Mumbai",
+    "Best Diabetes Doctor in Mumbai",
+    "Diabetes Treatment Mumbai",
+    "Thyroid Specialist Mumbai",
   ],
-  authors: [{ name: 'Dr Anuradha Kapoor', url: 'https://drakapoor.com' }],
-  referrer: 'origin-when-cross-origin',
-  colorScheme: 'light',
-  themeColor: 'white',
+  authors: [{ name: "Dr Anuradha Kapoor", url: "https://drakapoor.com" }],
+  referrer: "origin-when-cross-origin",
+  colorScheme: "light",
+  themeColor: "white",
   formatDetection: {
     email: true,
     address: true,
@@ -130,33 +184,29 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
-  classification: 'Medical Practice',
-  distribution: 'global',
-  rating: 'general',
-  revisits: '7 days',
+  classification: "Medical Practice",
+  distribution: "global",
+  rating: "general",
+  revisits: "7 days",
 };
 
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-  }) {
-    
+}) {
   return (
     <html lang="en">
-      <body className={cx(
-        roboto.className,
-        'min-h-screen',
-        'max-w-[2000px]', // Maximum width for ultra-wide screens
-        'mx-auto', // Center content
-        'px-4 sm:px-6 md:px-8 lg:px-12', // Responsive padding
-      )}>
+      <head>{isProd() && <GoogleTagManagerHead />}</head>
+      <body className={cx(roboto.className)}>
+        {isProd() && <GoogleTagManagerBody />}
         {children}
+        {isProd() && <Faq />}
         {isProd() && <Analytics />}
       </body>
     </html>
