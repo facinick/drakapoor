@@ -6,11 +6,13 @@ import "./globals.css";
 
 export const metadata = {
   title: "Dr A Kapoor's Diabetes Control Clinic",
-  description: "Diabetes remission, Diabetic complications, Blood sugar management, Weight loss management, Thyroid health management",
+  description: "Expert diabetes care and management in Mumbai. Specializing in diabetes reversal, blood sugar management, weight loss, and thyroid health. Book your consultation with Dr. Anuradha Kapoor today.",
   manifest: '/manifest.json',
   viewport: {
-      width: 'device-width',
-      initialScale: 1,
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
   },
   openGraph: {
     title: "Dr A Kapoor's Diabetes Control Clinic",
@@ -98,7 +100,20 @@ export const metadata = {
     },
   },
   creator: 'Shriyans Kapoor<facinick@gmail.com>',
-  keywords: ["Diabetes", "Diabetologist", "Mumbai", "Best Diabates Doctor", "Diabetes reversal", "Weight loss management", "Thyroid management", "Blood sugar management", "Diabetes Care Physician and Thyroid specialist","Diabetes Mellitus Type 2","Type 2 Diabetes","Diabetes Type II","Thyroid Care","Type 1 diabetes","Juvenile diabetes","Insulin dependent diabetes","Insulin therapy","Diabetes Diet","Pre Diabetes","Insulin resistance","Blood glucose levels","Sugar levels","High blood pressure","Hypertension","Thyroid hormone resistance","Thyroid stimulating hormone","TSH","Hypothyroidism","Diabetes care","Thyroid care","Diabetes diet Management","Weight loss", "Preventive diabetes care","Reversal of diabetes","Diet and exercise packages","Lab services","Imaging services","Diabetes foot care"],
+  keywords: [
+    "Diabetes", "Diabetologist", "Mumbai", "Best Diabetes Doctor", "Diabetes reversal", 
+    "Weight loss management", "Thyroid management", "Blood sugar management", 
+    "Diabetes Care Physician and Thyroid specialist", "Diabetes Mellitus Type 2",
+    "Type 2 Diabetes", "Diabetes Type II", "Thyroid Care", "Type 1 diabetes",
+    "Juvenile diabetes", "Insulin dependent diabetes", "Insulin therapy",
+    "Diabetes Diet", "Pre Diabetes", "Insulin resistance", "Blood glucose levels",
+    "Sugar levels", "High blood pressure", "Hypertension", "Thyroid hormone resistance",
+    "Thyroid stimulating hormone", "TSH", "Hypothyroidism", "Diabetes care",
+    "Thyroid care", "Diabetes diet Management", "Weight loss", "Preventive diabetes care",
+    "Reversal of diabetes", "Diet and exercise packages", "Lab services",
+    "Imaging services", "Diabetes foot care", "Mumbai Diabetologist", "Diabetes Specialist Mumbai",
+    "Best Diabetes Doctor in Mumbai", "Diabetes Treatment Mumbai", "Thyroid Specialist Mumbai"
+  ],
   authors: [{ name: 'Dr Anuradha Kapoor', url: 'https://drakapoor.com' }],
   referrer: 'origin-when-cross-origin',
   colorScheme: 'light',
@@ -120,6 +135,10 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
+  classification: 'Medical Practice',
+  distribution: 'global',
+  rating: 'general',
+  revisits: '7 days',
 };
 
 export default async function RootLayout({
@@ -130,7 +149,13 @@ export default async function RootLayout({
     
   return (
     <html lang="en">
-      <body className={cx(roboto.className)}>
+      <body className={cx(
+        roboto.className,
+        'min-h-screen',
+        'max-w-[2000px]', // Maximum width for ultra-wide screens
+        'mx-auto', // Center content
+        'px-4 sm:px-6 md:px-8 lg:px-12', // Responsive padding
+      )}>
         {children}
         {isProd() && <Analytics />}
       </body>

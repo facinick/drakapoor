@@ -7,7 +7,7 @@ export default function LaptopLayout({
 }) {
   return (
     <>
-      <div className='flex justify-between w-full max-w-7xl'>
+      <div className='flex justify-between w-full max-w-6xl'>
         <div className='w-[360px]'>
           <header className="sticky top-0 pt-16 pr-0 pb-16 pl-16">
             <Profile iconSize="large"/> 

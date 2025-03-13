@@ -1,10 +1,17 @@
 import { MetadataRoute } from "next";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const baseUrl = "https://drakapoor.com";
+  const currentDate = new Date();
+
   return [
     {
-      url: "https://drakapoor.com",
-      lastModified: new Date(),
+      url: baseUrl,
+      lastModified: currentDate,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: currentDate,
     },
   ];
 }
